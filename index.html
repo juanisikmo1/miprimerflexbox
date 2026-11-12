@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi primer maqueta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        [class*="caja"] {
+            position: relative;
+            isolation: isolate;
+            background-color: var(--c);
+            color: #fff;
+            padding: 24px;
+            border: 3px solid #fff;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, .7);
+            overflow: hidden;
+        }
+
+        .fondo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .45;
+            z-index: -1;
+        }
+
+        .caja1 {
+            --c: #FA0080;
+            min-height: 100px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .caja2 {
+    --c: #071827;
+    min-height: 480px;
+}
+
+.caja3 {
+    --c: #102D40;
+    min-height: 320px;
+}
+
+.caja4 {
+    --c: #55CC86;
+    min-height: 320px;
+}
+
+.caja5 {
+    --c: #F04BC5;
+    min-height: 320px;
+}
+
+.caja6 {
+    --c: #173B42;
+    min-height: 240px;
+}
+
+.caja7 {
+    --c: #E8FFF1;
+    min-height: 240px;
+}
+
+.caja8 {
+    --c: #12384A;
+    min-height: 240px;
+}
+
+.caja9 {
+    --c: #38B875;
+    min-height: 240px;
+}
+
+.caja10 {
+    --c: #FA0080;
+    min-height: 240px;
+}
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .15);
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            padding: 6px 14px;
+            text-decoration: none;
+            text-shadow: none;
+            transition: .2s;
+        }
+
+        .btn-nav i {
+            font-size: 1.2rem;
+        }
+
+        .btn-nav:hover {
+            background: #fff;
+            color: #D9450B;
+        }
+
+        .caja2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .caja2 .titulo {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 800;
+        }
+
+        .icono-grande {
+            font-size: 4.5rem;
+            line-height: 1;
+        }
+
+        .stat {
+            font-size: 2.2rem;
+            font-weight: 800;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+        }
+
+        .caja6 a,
+        .caja10 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .caja6 a:hover,
+        .caja10 a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <nav class="col-12 caja1 d-flex flex-wrap align-items-center justify-content-center gap-2">
+                <a class="btn-nav" href="index.html"><span>Estructura y sintaxis</span><i
+                        class="bi bi-code-slash"></i></a>
+                <a class="btn-nav" href="especificidad.html"><span>Niveles de especificidad</span><i
+                        class="bi bi-layers"></i></a>
+                <a class="btn-nav" href="pseudo.html"><span>Pseudo Clases y Pseudo Elementos</span><i
+                        class="bi bi-cursor"></i></a>
+                <a class="btn-nav" href="boxmodel.html"><span>Box Model</span><i class="bi bi-bounding-box"></i></a>
+            </nav>
+
+
+            <header class="col-12 caja2">
+                <h1 class="titulo">CSS FÁCIL</h1>
+                <p class="fs-4 mb-0">Educativo y Visual - SENA Cenigraf ADSO</p>
+                <p class="fs-4">Bogotá - Colombia</p>
+                <img class="fondo" src="https://picsum.photos/id/0/800/600" alt="">
+                <div class="mt-3">
+                    <h2 class="h3"><i class="bi bi-mortarboard-fill me-2"></i>Aprende Desarrollo Web</h2>
+                    <p>Domina HTML5, CSS3 y Bootstrap creando maquetas profesionales.</p>
+                </div>
+            </header>
+
+
+            <section id="estructura" class="col-12 col-md-4 caja3">
+                <i class="bi bi-filetype-html icono-grande"></i>
+                <h3 class="mt-2">Estructura HTML</h3>
+                <p>Organiza tu código semántico para mejorar el posicionamiento y la accesibilidad.</p>
+            </section>
+
+
+            <section id="especificidad" class="col-12 col-md-4 caja4">
+                <i class="bi bi-filetype-css icono-grande"></i>
+                <h3 class="mt-2">Estilos CSS</h3>
+                <p>Aplica diseños atractivos, colores, tipografías y efectos visuales a tus componentes.</p>
+            </section>
+
+            <section id="pseudo" class="col-12 col-md-4 caja5">
+                <i class="bi bi-bootstrap-fill icono-grande"></i>
+                <h3 class="mt-2">Bootstrap 5</h3>
+                <p>Acelera tu desarrollo usando el sistema de rejilla y componentes prediseñados.</p>
+            </section>
+
+
+            <aside id="boxmodel" class="col-12 col-md-3 caja6">
+                <h4><i class="bi bi-compass me-2"></i>Navegación Rápida</h4>
+                <ul class="list-unstyled mt-3 fs-5">
+                    <li><a href="#"><i class="bi bi-book me-2"></i>Documentación</a></li>
+                    <li><a href="#"><i class="bi bi-laptop me-2"></i>Ejemplos</a></li>
+                </ul>
+            </aside>
+
+
+            <section class="col-6 col-md-2 caja7 text-center d-flex flex-column justify-content-center">
+                <i class="bi bi-people-fill stat-icon"></i>
+                <div class="stat">+500</div>
+                <p class="mb-0">Alumnos registrados</p>
+            </section>
+
+
+            <section class="col-6 col-md-2 caja8 text-center d-flex flex-column justify-content-center">
+                <i class="bi bi-tools stat-icon"></i>
+                <div class="stat">100%</div>
+                <p class="mb-0">Práctico</p>
+            </section>
+
+            <section class="col-12 col-md-2 caja9 text-center d-flex flex-column justify-content-center">
+                <i class="bi bi-infinity stat-icon"></i>
+                <div class="stat">24/7</div>
+                <p class="mb-0">Acceso ilimitado</p>
+            </section>
+
+
+            <footer class="col-12 col-md-3 caja10">
+                <h4><i class="bi bi-person-lines-fill me-2"></i>Contacto</h4>
+                <p class="mt-3 mb-1"><i class="bi bi-envelope me-2"></i><a
+                        href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
+                <small>© 2026 Mi Maqueta</small>
+            </footer>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
